@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { ClipLoader } from "react-spinners";
+import { toast } from "react-toastify";
+import axios from "axios";
 
 export default function Contact() {
   const [name, setName] = useState("");
