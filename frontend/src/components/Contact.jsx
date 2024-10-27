@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ClipLoader from "react-spinners";
+import { ClipLoader } from "react-spinners";
 
 export default function Contact() {
   const [name, setName] = useState("");
