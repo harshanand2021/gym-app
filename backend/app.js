@@ -1,6 +1,7 @@
 import express from "express";
 import { config } from "dotenv";
 import cors from "cors";
+import { sendEmail } from "./utils/sendEmail.js";
 
 const app = express();
 const router = express.Router();
@@ -27,6 +28,20 @@ router.post("/send/mail", async (req, res, next) => {
         message: "Please provide all details",
       })
     );
+  }
+  try {
+    await sendEmail({
+      email: "harsh25061999@gmail.com",
+      subject: "GYM WEBAPP content",
+      message,
+      userEmail: email,
+    });
+    res.status(200).json({
+      success: true,
+      message: "Message sent successfully",
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Interval server error" });
   }
 });
 app.use(router);
