@@ -1,9 +1,9 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { ClipLoader } from "react-spinners";
 import { toast } from "react-toastify";
-import axios from "axios";
 
-export default function Contact() {
+const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -14,7 +14,7 @@ export default function Contact() {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/send/mail",
+        "http://localhost:2000/send/mail",
         {
           name,
           email,
@@ -80,4 +80,6 @@ export default function Contact() {
       </form>
     </section>
   );
-}
+};
+
+export default Contact;
