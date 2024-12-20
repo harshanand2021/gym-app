@@ -6,6 +6,10 @@ import { sendEmail } from "./utils/sendEmail.js";
 const app = express();
 const router = express.Router();
 
+app.use("/", (req,res) => {
+  res.json({ message : "Hello from gym-app server" })
+})
+
 config({ path: "./config.env" });
 
 app.use(
