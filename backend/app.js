@@ -6,6 +6,10 @@ import { sendEmail } from "./utils/sendEmail.js";
 const app = express();
 const router = express.Router();
 
+app.get("/", (res) => {
+  res.send("Express on vercel")
+})
+
 app.use("/", (req,res) => {
   res.json({ message : "Hello from gym-app server" })
 })
