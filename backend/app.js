@@ -15,7 +15,7 @@ config({ path: "./config.env" });
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
+    origin: "https://gym-app-orpin-zeta.vercel.app/",
     methods: ["POST"],
     credentials: true,
   })
