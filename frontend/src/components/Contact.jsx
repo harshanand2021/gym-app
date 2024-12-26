@@ -9,12 +9,14 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const backend_url = "https://gym-server-six.vercel.app/send/mail";
+
   const sendMail = async (e) => {
     e.preventDefault();
     setLoading(true);
     try {
       const { data } = await axios.post(
-        "http://localhost:2000/send/mail",
+        backend_url,
         {
           name,
           email,
