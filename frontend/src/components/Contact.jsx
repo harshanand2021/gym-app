@@ -9,7 +9,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const backend_url = "https://gym-server-six.vercel.app/send/mail";
+  const backend_url = "https://gym-server-six.vercel.app";
 
   const sendMail = async (e) => {
     e.preventDefault();
