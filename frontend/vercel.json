@@ -1,0 +1,9 @@
+{
+    "rewrites": [
+      {
+        "source": "/https://gym-server-six.vercel.app/send/mail",
+        "destination": "https://gym-server-six.vercel.app/"
+      }
+    ]
+  }
+  
